@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Volt · library vault</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts (can also be kept in HTML) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>my volt</h1>
+        <div class="subhead">⚡ store · review · archive — your personal library vault</div>
+    </header>
+
+    <!-- ADD new item panel -->
+    <section class="add-panel">
+        <h2>➕ add to vault</h2>
+        <div class="input-group">
+            <div class="field">
+                <label>title</label>
+                <input type="text" id="titleInput" placeholder="e.g. Dune, Project Hail Mary..." autocomplete="off">
+            </div>
+            <div class="field">
+                <label>description / notes</label>
+                <textarea id="descInput" placeholder="short review, impressions..." rows="2"></textarea>
+            </div>
+            <button class="btn-primary" id="addBtn">➕ add entry</button>
+        </div>
+    </section>
+
+    <!-- Library toolbar -->
+    <div class="toolbar">
+        <div class="stats" id="statsDisplay">📚 0 items · 0 reviewed</div>
+        <div class="action-buttons">
+            <button class="btn-secondary" id="exportBtn" title="save library as JSON file">💾 save library</button>
+            <button class="btn-secondary" id="importBtn">📂 load library</button>
+            <input type="file" id="fileImport" accept="application/json">
+            <button class="btn-secondary" id="clearBtn" style="border-color:#b45a5a;">🗑️ clear all</button>
+        </div>
+    </div>
+
+    <!-- Library grid display -->
+    <section class="library-list">
+        <div id="libraryContainer" class="library-grid">
+            <!-- cards will be injected here -->
+        </div>
+    </section>
+
+    <footer>
+        <span>⚡ my volt — your library, always with you</span>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
